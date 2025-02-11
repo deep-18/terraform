@@ -7,3 +7,5 @@ pri_sub_3a_cidr = "10.0.3.0/24"
 pri_sub_4a_cidr = "10.0.4.0/24"
 pri_sub_5a_cidr = "10.0.5.0/24"
 pri_sub_6a_cidr = "10.0.6.0/24"
+
+key_name = "azureAgent"
