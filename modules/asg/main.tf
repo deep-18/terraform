@@ -3,7 +3,7 @@ resource "aws_launch_template" "launch_template" {
   image_id      = var.ami
   instance_type = "t2.micro"
   key_name      = var.key_name
-  user_data     = filebase64("../modules/ec2/config.sh")
+#   user_data     = filebase64("../modules/ec2/config.sh")
 
 
   vpc_security_group_ids = [var.alb_sg]
