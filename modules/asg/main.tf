@@ -1,7 +1,7 @@
 resource "aws_launch_template" "launch_template" {
   name          = "${var.project_name}-tpl"
   image_id      = var.ami
-  instance_type = t2.micro
+  instance_type = "t2.micro"
   key_name      = var.key_name
   user_data     = filebase64("../modules/ec2/config.sh")
 
