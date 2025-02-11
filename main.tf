@@ -25,7 +25,7 @@ module "asg" {
   source = "./modules/asg"
   project_name = var.project_name
   alb_sg = module.sg.sg
-  ami = var.ami
+  ami = module.ec2.ami
   # max_size = var.max_size
   # min_size = var.min_size
   # desired_cap = var.desired_cap
