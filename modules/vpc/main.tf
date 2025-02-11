@@ -44,7 +44,7 @@ resource "aws_subnet" "pub_sub_2a" {
 resource "aws_route_table" "public_route_table" {
   vpc_id = aws_vpc.vpc.id
 
-  route = {
+  route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.internet_gateway.id
   }
@@ -71,7 +71,7 @@ resource "aws_route_table_association" "pub-sub-2-b_route_table_association" {
 resource "aws_subnet" "pri_sub_3a" {
   vpc_id                   = aws_vpc.vpc.id
   cidr_block               = var.pri_sub_3a_cidr
-  availability_zone        = data.aws_availability_zones.available_zones.names[0]
+  availability_zone        = data.aws_availability_zones.availability_zone.names[0]
   map_public_ip_on_launch  = false
 
   tags      = {
@@ -83,7 +83,7 @@ resource "aws_subnet" "pri_sub_3a" {
 resource "aws_subnet" "pri_sub_4b" {
   vpc_id                   = aws_vpc.vpc.id
   cidr_block               = var.pri_sub_4a_cidr
-  availability_zone        = data.aws_availability_zones.available_zones.names[1]
+  availability_zone        = data.aws_availability_zones.availability_zone.names[1]
   map_public_ip_on_launch  = false
 
   tags      = {
@@ -95,7 +95,7 @@ resource "aws_subnet" "pri_sub_4b" {
 resource "aws_subnet" "pri_sub_5a" {
   vpc_id                   = aws_vpc.vpc.id
   cidr_block               = var.pri_sub_5a_cidr
-  availability_zone        = data.aws_availability_zones.available_zones.names[0]
+  availability_zone        = data.aws_availability_zones.availability_zone.names[0]
   map_public_ip_on_launch  = false
 
   tags      = {
@@ -107,7 +107,7 @@ resource "aws_subnet" "pri_sub_5a" {
 resource "aws_subnet" "pri_sub_6b" {
   vpc_id                   = aws_vpc.vpc.id
   cidr_block               = var.pri_sub_6a_cidr
-  availability_zone        = data.aws_availability_zones.available_zones.names[1]
+  availability_zone        = data.aws_availability_zones.availability_zone.names[1]
   map_public_ip_on_launch  = false
 
   tags      = {

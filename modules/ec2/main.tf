@@ -4,8 +4,8 @@
 resource "aws_instance" "website" {
   ami           = "ami-0c614dee691cbbf37"
   instance_type = "t2.micro"
-  subnet_id     = [ var.pub_sub_1a_id, var.pub_sub_2a_id ]
-  user_data = filebase64("./config.sh")
+  subnet_id     = var.pub_sub_1a_id
+  user_data = filebase64("../modules/ec2/config.sh")
   security_groups = [ var.sg ]
   key_name = var.key_name
   tags = {
