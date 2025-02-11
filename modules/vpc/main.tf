@@ -22,7 +22,7 @@ data "aws_availability_zone" "availibility_zone" {}
 resource "aws_subnet" "pub_sub_1a" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.pub_sub_1a_cidr
-  availability_zone = data.aws_availability_zone.availibility_zone.names[1]
+  availability_zone = data.aws_availability_zone.availibility_zone.name[1]
   map_public_ip_on_launch = true
 
   tags = {
@@ -33,7 +33,7 @@ resource "aws_subnet" "pub_sub_1a" {
 resource "aws_subnet" "pub_sub_2a" {
   vpc_id = aws_vpc.vpc.id
   cidr_block = var.pub_sub_2a_cidr
-  availability_zone = data.aws_availability_zone.availibility_zone.names[2]
+  availability_zone = data.aws_availability_zone.availibility_zone.name[2]
   map_public_ip_on_launch = true
 
   tags = {
