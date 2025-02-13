@@ -1,5 +1,5 @@
 resource "aws_launch_template" "launch_template" {
-  name          = "${var.project_name}_launch_template"
+  name          = "${var.project_name}-lt"
   image_id      = var.ami
   instance_type = "t2.micro"
   key_name      = var.key_name

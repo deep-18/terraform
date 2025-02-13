@@ -1,4 +1,4 @@
-project_name = "Terraform Demo"
+project_name = "Terraform_Demo"
 region = "us-east-1"
 vpc_cidr = "10.0.0.0/16"
 pub_sub_1a_cidr = "10.0.1.0/24"
